@@ -1,0 +1,128 @@
+<!--begin::Toolbar-->
+<div class="toolbar mb-n1 pt-3 mb-lg-n3 pt-lg-6 px-5" id="kt_toolbar">
+    <!--begin::Container-->
+    <div id="kt_toolbar_container" class="container-xxl d-flex flex-stack flex-wrap gap-2">
+        <!--begin::Page title-->
+        <div class="page-title d-flex flex-column align-items-start me-3 py-2 py-lg-0 gap-2">
+            <!--begin::Title-->
+            <h1 class="d-flex text-dark fw-bolder m-0 fs-3">لوحة التحكم
+                <!--begin::Separator-->
+                <span class="h-20px border-gray-400 border-start mx-3"></span>
+                <!--end::Separator-->
+                <!--begin::Description-->
+                <small class="text-gray-500 fs-7 fw-bold my-1">البلاغات</small>
+                <!--end::Description-->
+            </h1>
+            <!--end::Title-->
+        </div>
+        <!--end::Page title-->
+
+    </div>
+    <!--end::Container-->
+</div>
+<!--end::Toolbar-->
+<!--begin::Container-->
+<div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
+    <!--begin::Post-->
+    <div class="content flex-row-fluid" id="kt_content">
+
+        <!--begin::Tab Content-->
+        <div class="tab-content">
+            <!--begin::Tab pane-->
+            <div id="kt_project_targets_card_pane" class="tab-pane fade show active">
+                <!--begin::Row-->
+                <div class="row g-9">
+                    <!--begin::Col-->
+                    <div class="col-md-4 col-lg-12 col-xl-4">
+                        <!--begin::Col header-->
+                        <div class="mb-9">
+                            <div class="card p-5">
+
+                                <div class="d-flex flex-stack mb-3">
+                                    <div class="fw-bolder fs-4">حالية
+                                        <span class="fs-6 text-gray-400 ms-2" id="openCaseCounter">0</span>
+                                    </div>
+
+                                </div>
+                                <div class="h-3px w-100 bg-warning"></div>
+                            </div>
+                        </div>
+                        <!--end::Col header-->
+                        <table id="kt_report_open_table">
+
+                        </table>
+
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-md-4 col-lg-12 col-xl-4">
+                        <!--begin::Col header-->
+
+                        <div class="mb-9">
+                            <div class="card p-5">
+
+                                <div class="d-flex flex-stack mb-3">
+                                    <div class="fw-bolder fs-4">جارية
+                                        <span class="fs-6 text-gray-400 ms-2" id="runningCaseCounter">0</span>
+                                    </div>
+
+                                </div>
+                                <div class="h-3px w-100 bg-primary"></div>
+                            </div>
+                        </div>
+                        <!--end::Col header-->
+                        <table id="kt_report_running_table">
+
+                        </table>
+
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-md-4 col-lg-12 col-xl-4">
+                        <!--begin::Col header-->
+
+                        <div class="mb-9">
+                            <div class="card p-5">
+
+                                <div class="d-flex flex-stack mb-3">
+                                    <div class="fw-bolder fs-4">منتهية
+                                        <span class="fs-6 text-gray-400 ms-2" id="closedCaseCounter">0</span>
+                                    </div>
+
+                                </div>
+                                <div class="h-3px w-100 bg-success"></div>
+                            </div>
+                        </div>
+                        <!--end::Col header-->
+                        <table id="kt_report_closed_table">
+
+                        </table>
+
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Row-->
+            </div>
+            <!--end::Tab pane-->
+
+        </div>
+        <!--end::Tab Content-->
+
+
+    </div>
+    <!--end::Post-->
+</div>
+<!--end::Container-->
+
+<!--begin::Global Javascript Bundle(used by all pages)-->
+<script src="/assets/plugins/global/plugins.bundle.js"></script>
+<script src="/assets/js/scripts.bundle.js"></script>
+<!--end::Global Javascript Bundle-->
+<!--begin::Page Vendors Javascript(used by this page)-->
+<script src="/assets/plugins/custom/leaflet/leaflet.bundle.js"></script>
+<script src="/assets/plugins/custom/datatables/datatables.bundle.js"></script>
+<!--end::Page Vendors Javascript-->
+
+<script src="/assets/js/myScripts/report/list/open.js"></script>
+<script src="/assets/js/myScripts/report/list/running.js"></script>
+<script src="/assets/js/myScripts/report/list/closed.js"></script>
