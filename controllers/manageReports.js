@@ -93,8 +93,7 @@ router.get('/stranded/page/get/:id', async function (req, res, next) {
 
 })
 router.post('/new', upload.array('image', 2), async function (req, res, next) {
-
-    const { fullName, nationalID, phoneNumber, birthDate, city, region, type, location, description } = JSON.parse(req.body.payload[0])
+    const { fullName, nationalID, phoneNumber, birthDate, city, region, type, location, description } = JSON.parse(req.body.payload)
     let files = req.files;
 
     const newReportData = {

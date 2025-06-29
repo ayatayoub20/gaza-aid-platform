@@ -54,7 +54,7 @@ var KTEvaluationList = function () {
                                 span = `<span class="badge badge-light-warning">تقييم متطوع</span>`
                                 break;
                             case 'stToVol':
-                                span = `<span class="badge badge-light-success">تقييم تقرير</span>`
+                                span = `<span class="badge badge-light-success">تقييم مستفيد</span>`
                                 break;
                         }
 

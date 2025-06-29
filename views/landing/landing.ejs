@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>منصة تكافل الاغاثية </title>
+    <link rel="icon" type="image/x-icon" href="/assets/media/logos/logo-main.png" />
+
+    <!-- Bootstrap RTL CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet" />
+    <!-- 
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        /* Hero Banner Styling */
+        #landing-hero {
+            /* background: #14263C; */
+            background-image: url('/assets/media/logos/banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* padding-top: 150px !important; */
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            height: 80vh;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #landing-hero h1 {
+            color: #1B9EF8;
+            font-size: 50px;
+            font-weight: 700;
+            ;
+        }
+
+
+        .btn-cta {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 13px;
+            gap: 15px;
+            width: 174px;
+            height: 45px;
+            left: calc(50% - 174px/2);
+            background: #FFFFFF;
+            border-radius: 5px;
+
+        }
+
+        .btn-cta:hover {
+            background-color: #e0e0e0;
+            color: #1B9EF8;
+            text-decoration: none;
+        }
+
+        #about p {
+            font-size: 14px;
+            line-height: 26px;
+        }
+    </style> -->
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        /* Navbar Base */
+        #mainNavbar {
+            background-color: transparent;
+            transition: background-color 0.4s ease, box-shadow 0.4s ease;
+            padding: 0.7rem 1rem;
+        }
+
+        #mainNavbar .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin: 0 10px;
+        }
+
+        #mainNavbar .nav-btn {
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        #mainNavbar .btn-primary {
+            background-color: #1B9EF8;
+            border-color: #1B9EF8;
+        }
+
+        #mainNavbar .btn-outline-light {
+            border-color: white;
+            color: white;
+        }
+
+        /* When Scrolled */
+        #mainNavbar.scrolled {
+            background-color: white;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #mainNavbar.scrolled .nav-link {
+            color: #14263C !important;
+        }
+
+        #mainNavbar.scrolled .btn-outline {
+            border-color: #14263C;
+            color: #14263C;
+        }
+
+        #mainNavbar.scrolled .btn-primary {
+            background-color: #1B9EF8;
+            border-color: #1B9EF8;
+            color: white;
+        }
+
+        /* Hero Banner */
+        #landing-hero {
+            background-image: url('/assets/media/logos/banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 6rem 2rem;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+        }
+
+        #landing-hero h1 {
+            color: #1B9EF8;
+            font-size: 50px;
+            font-weight: 700;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            padding: 8px 13px;
+            background: #FFFFFF;
+            color: #1B9EF8;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn-cta:hover {
+            background-color: #e0e0e0;
+            color: #1B9EF8;
+        }
+
+        #about p {
+            font-size: 14px;
+            line-height: 26px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header/Navbar -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container d-flex align-items-center">
+            <a class="navbar-brand " href="/">
+                <img src="/assets/media/logos/logo-main.png" alt="Logo" height="60" />
+            </a>
+
+            <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse mx-5" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how-it-works">فريق معاً الإغاثي</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">إنجازات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/reports/search/page/get" target="_blank">بلاغاتي</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/news/page/get" target="_blank">الأخبار</a></li>
+                </ul>
+            </div>
+
+            <div class="d-flex ms-auto">
+                <a href="/sign-in" class="btn btn-success me-2">الدخول</a>
+                <a href="/sign-up" class="btn btn-primary">تطوع</a>
+            </div>
+        </div>
+
+    </nav> -->
+    <!-- Navbar -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+            <!-- Logo -->
+            <a class="navbar-brand" href="/">
+                <img src="/assets/media/logos/logo-main.png" alt="Logo" height="55" />
+            </a>
+
+            <!-- Center Menu -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how-it-works">فريق معاً الإغاثي</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">إنجازات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/reports/search/page/get" target="_blank">بلاغاتي</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/news/page/get" target="_blank">الأخبار</a></li>
+                </ul>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex">
+                <a href="/sign-in" class="btn btn-outline me-2 nav-btn bg-white">الدخول</a>
+                <a href="/sign-up" class="btn btn-primary nav-btn">تطوع</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Banner Section -->
+    <section id="landing-hero">
+        <h1 class="mb-3 mt-5"> منصّة تكافل الإغاثية </h1>
+        <p class="fs-5 mb-4">كفالة الإحترام والسلامة والكرامة للجميع</p>
+        <a href="/reports/new" class="btn btn-cta d-block mx-auto" style="width: 200px;">تقديم بلاغ</a>
+    </section>
+
+    <!-- Add your other sections here -->
+    <!--  about section start -->
+    <div class="container mt-5 mb-5" id="about">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card text-center"
+                    style="width: 25rem; background-color: #14263C; color: #fff; height: 15rem;">
+                    <img src="/assets/media/logos/vector.svg"
+                        style="width: 50px; margin-right: 175px; margin-top: 20px;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">فريق تكافل الإغاثي</h5>
+                        <p class="card-text ">نحن فريق تطوعي إغاثي نساند المتضررين من الحرب في غزة.
+                            نعمل على توفير الغذاء والدواء والمأوى لكل محتاج.
+                            نطمح لبناء ما تهدّم حتى يعود الأمن والاستقرار لشعبنا.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 25rem; background-color: #14263C; color: #fff;  height: 15rem; ">
+                    <img src="/assets/media/logos/vector2.svg"
+                        style="width: 50px; margin-right: 175px; margin-top: 20px;" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">الإعتماد</h5>
+                        <p class="card-text">
+                            نؤمن بأن العمل الجماعي أساس النجاح وتحقيق الأثر.
+                            نعمل بشراكة متكاملة مع الجهات الحكومية والخاصة والمجتمعية.
+                            هدفنا المشترك: دعم الإنسان وتعزيز الاستجابة الفاعلة</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-center"
+                    style="width: 25rem; background-color: #14263C; color: #fff;  height: 15rem;">
+                    <img src="/assets/media/logos/vector3.svg"
+                        style="width: 50px; margin-right: 175px; margin-top: 20px;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">المهمة الرئيسية</h5>
+                        <p class="card-text">نلتزم بتقديم الإغاثة الشاملة والعاجلة للمتضررين من الحرب، استجابة
+                            للاحتياجات الإنسانية الأساسية.
+                            نغطي مجالات الإغاثة الطبية والغذائية وتوفير المأوى والنظافة والمياه بشكل متكامل</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-center"
+                    style="width: 25rem; background-color: #14263C; color: #fff; height: 15rem;">
+                    <img src="/assets/media/logos/vector4.svg"
+                        style="width: 50px; margin-right: 175px; margin-top: 20px;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">التغطية</h5>
+                        <p class="card-text  ">
+                            تمتد عملياتنا الرئيسية في شمال غزّة ومنطقة الوسط وجنوب غزّة ونتشرف بمساعدة الفرق التطوعية
+                            الأخرى في مناطق أخرى عند الحاجة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-center"
+                    style="width: 25rem; background-color: #14263C; color: #fff; height: 15rem;">
+                    <img src="/assets/media/logos/vector5.svg"
+                        style="width: 50px; margin-right: 175px; margin-top: 20px;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> التمويل الذاتي</h5>
+                        <p class="card-text ">
+                            ننفذ عملياتنا الأساسية في شمال ووسط وجنوب غزة.
+                            ونتعاون مع الفرق التطوعية لدعم المناطق الأخرى عند الحاجة.
+                            هدفنا إيصال المساعدة حيثما وُجدت الحاجة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-center"
+                    style="width: 25rem; background-color: #14263C; color: #fff; height: 15rem;">
+                    <img src="/assets/media/logos/vector6.svg"
+                        style="width: 50px; margin-right: 175px; margin-top: 20px;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> الشغف</h5>
+                        <p class="card-text ">
+                            لا يقتصر شغفنا على تقديم المساعدات، بل يتعداه إلى التحدي المستمر للوصول إلى المناطق الأكثر
+                            تضراً وتقديم العون في أصعب الظروف.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  about section start -->
+    <section class="py-5 text-white" style="background-color: #14263C;">
+        <div class="container">
+            <!-- Section Heading -->
+            <h2 class="text-center mb-3" style="color: #1B9EF8;">نحن في خدمة المجتمع</h2>
+            <p class="text-center " style="color: #fff;">"تمد يد العون وقت الحاجة"</p>
+
+            <div class="row align-items-center mt-5">
+
+
+                <!-- Text Content Section -->
+                <div class="col-lg-7" style="font-size: 23px; width: 50%;">
+                    <p style="line-height: 50px !important;">
+                        نحن في <strong style="color:#1B9EF8">"تكافل"</strong> نؤمن أن الخير مسؤولية جماعية.
+                        فريقنا يتكون من شباب متطوعين يحملون روح المبادرة ويعملون بإخلاص في تقديم الدعم الإغاثي للمحتاجين
+                        والمضطرين.
+                    </p>
+                    <ul>
+                        <li>توزيع الغذاء، الدواء، والمساعدات العاجلة في أوقات الأزمات.</li>
+                        <li>نستجيب بسرعة ونتشـق مع مؤسسات محلية لتعزيز الأثر.</li>
+                        <li>هدفنا أن يكون بذل العطاء لمن فقد الأمان، ونزرع الأمل بروح العمل الجماعي والتكافل.</li>
+                    </ul>
+                </div>
+
+
+                <!-- Image Section -->
+                <div class="col-lg-5 mb-4 mb-lg-0 text-center">
+                    <img src="/assets/media/logos/frame.png" class="img-fluid rounded" alt="صورة المتطوعين">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--  about section end -->
+    <!-- Help Request Section -->
+    <section class="bg-white text-white py-5">
+        <div class="container text-center">
+            <div class="bg-primary bg-opacity-10 p-4 rounded" style="background-color: #14263C !important;">
+                <h5 class="mb-3">بحاجة للمساعدة؟ فريقنا جاهز لخدمتك</h5>
+                <form class="d-flex justify-content-center align-items-center gap-2 flex-wrap">
+                    <!-- Email Input -->
+                    <input type="email" class="form-control w-auto" placeholder="أدخل بريدك الإلكتروني">
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary">أرسل الآن</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section
+    <footer class="bg-white text-center py-4">
+        <div class="container">
+            <!-- Social Media Icons -->
+            <!-- <div class="mb-3">
+                <a href="#" class="text-dark me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-dark me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-dark me-3"><i class="fab fa-vimeo-v"></i></a>
+                <a href="#" class="text-dark"><i class="fab fa-youtube"></i></a>
+            </div> -->
+
+            <!-- Navigation Links -->
+            <!-- <ul class="list-inline mb-3">
+                <li class="list-inline-item"><a href="#" class="text-dark">فريق معنا الإغاثي</a></li>
+                <li class="list-inline-item"><a href="#" class="text-dark">إنجازات</a></li>
+                <li class="list-inline-item"><a href="#" class="text-dark">بلاغاتي</a></li>
+                <li class="list-inline-item"><a href="#" class="text-dark">الأخبار</a></li>
+            </ul> -->
+
+            <!-- Logo -->
+            <!-- <div class="mb-2">
+                <img src="images/logo.png" alt="منصة تكافل" width="80">
+            </div> -->
+
+            <!-- Footer Bottom Text -->
+            <!-- <div class="text-muted small">
+                جميع الحقوق محفوظة &copy; 2025 .. <br>
+                <a href="#" class="text-muted">شروط الخدمة</a> |
+                <a href="#" class="text-muted">سياسة الخصوصية</a>
+            </div>
+        </div>
+    </footer> -->
+
+
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4">
+        <img src="/assets/media/logos/logo-main.png" alt="Footer Logo" height="40" />
+        <p class="mt-2 mb-0">Togather © 2024-2025</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('mainNavbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

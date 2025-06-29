@@ -12,7 +12,7 @@ router.get('/', async function (req, res, next) {
     const noUsers = await User.countDocuments({type:"volunteer"})
     const noReports = await Report.countDocuments({status:"closed"})
     
-    res.render('landing/landingPage' , {noUsers , noReports , layout:false})
+    res.render('landing/landing' , {noUsers , noReports , layout:false})
 })
 
 

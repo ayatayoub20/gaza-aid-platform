@@ -15,8 +15,18 @@ router.get('/data/get', async function (req, res, next) {
 
     const query = req.query
 
-    const queryValue = (req.query.search.value == '') ? {} : JSON.parse(query.search.value)
-    let queryObj = {}
+    let queryValue = {};
+try {
+    const searchValue = req.query?.search?.value;
+    queryValue = (searchValue && searchValue.trim() !== '') ? JSON.parse(searchValue) : {};
+} catch (err) {
+    console.error("Error parsing search.value as JSON:", err.message);
+    queryValue = {};
+}
+
+    console.log("البيانات المستلمة من الواجهة:", req.query);
+
+        let queryObj = {}
 
     if (queryValue.filter) {
         queryObj.$and = [queryValue.filter]
@@ -41,11 +51,12 @@ router.get('/data/get', async function (req, res, next) {
     const admins = await User.find({ type: 'admin', status: 'active' }).find(queryObj).limit(parseInt(query.length)).skip(parseInt(query.start))
 
     return res.json({
+        draw: Number(req.query.draw) || 0,
         recordsTotal: adminsCount,
         recordsFiltered: adminsFillterCount,
-        admins,
-        CITIES
-    })
+        data: admins
+    });
+    
 })
 
 router.post('/new', async function (req, res, next) {
